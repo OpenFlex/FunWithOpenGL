@@ -8,11 +8,12 @@
 
 #import "ECursor.h"
 
+static BOOL isHidden = YES;
+
 @implementation ECursor
 
 + (void)setMouseShouldHide:(BOOL)shouldHide
 {
-    static BOOL isHidden = YES;
     if (!isHidden && shouldHide) {
         [NSCursor hide];
         isHidden = YES;
@@ -20,6 +21,11 @@
         [NSCursor unhide];
         isHidden = NO;
     }
+}
+
++ (BOOL)hidden
+{
+    return isHidden;
 }
 
 @end

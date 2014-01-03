@@ -18,5 +18,6 @@
 #import "ECursor.h"
 #import "ERandom.h"
 #import "EGeneralMath.h"
+#import "EEventQueue.h"
 
 #endif

@@ -10,24 +10,30 @@
 
 @implementation ETicker
 
-- (void)logicWasUpdated
-{
-//    self.timeSinceLogicUpdate = NSTimeIntervalSince1970;
-//    self.timeSinceLogicUpdate -= self.timeForLogicRefrence;
-//    self.timeForLogicRefrence = NSTimeIntervalSince1970;
-}
-
 - (void)drawingWasCompleted
 {
-    self.timeSinceDrawUpdate = [[NSDate date] timeIntervalSince1970];
+    self.timeSinceLastDraw = [[NSDate date] timeIntervalSince1970];
 }
 
-- (NSTimeInterval)delta
+- (void)logicWasCompleted
 {
-    self.timeForDisplayRefrence = [[NSDate date] timeIntervalSince1970];
-    self.timeForDisplayRefrence -= self.timeSinceDrawUpdate;
+    self.timeSinceLastLogic = [[NSDate date] timeIntervalSince1970];
+}
+
+- (NSTimeInterval)drawingDelta
+{
+    static NSTimeInterval delta;
     
-    return self.timeForDisplayRefrence;
+    delta = [[NSDate date] timeIntervalSince1970];
+    return delta - self.timeSinceLastDraw;
+}
+
+- (NSTimeInterval)logicDelta
+{
+    static NSTimeInterval delta;
+    
+    delta = [[NSDate date] timeIntervalSince1970];
+    return delta - self.timeSinceLastLogic;
 }
 
 @end

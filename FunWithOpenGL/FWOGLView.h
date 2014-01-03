@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "EEventQueue.h"
 
-@interface FWOGLView : NSOpenGLView
+@class FWOGLAppDelegate;
+
+@interface FWOGLView : NSOpenGLView <EventQueueDelegate>
 
 @end

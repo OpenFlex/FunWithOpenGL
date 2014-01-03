@@ -15,15 +15,13 @@
 
 @property (nonatomic, assign) BOOL paused;
 
-@property (nonatomic, assign) NSTimeInterval timeForLogicRefrence;
-@property (nonatomic, assign) NSTimeInterval timeForDisplayRefrence;
+@property (nonatomic, assign) NSTimeInterval timeSinceLastDraw;
+@property (nonatomic, assign) NSTimeInterval timeSinceLastLogic;
 
-@property (nonatomic, assign) NSTimeInterval timeSinceLogicUpdate;
-@property (nonatomic, assign) NSTimeInterval timeSinceDrawUpdate;
-
-- (void)logicWasUpdated;
 - (void)drawingWasCompleted;
+- (void)logicWasCompleted;
 
-- (NSTimeInterval)delta;
+- (NSTimeInterval)drawingDelta;
+- (NSTimeInterval)logicDelta;
 
 @end

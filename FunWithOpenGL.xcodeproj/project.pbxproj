@@ -14,6 +14,7 @@
 		496724181876202700A4B67A /* EGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 496724171876202700A4B67A /* EGame.m */; };
 		4967241B187634AB00A4B67A /* ERandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241A187634AB00A4B67A /* ERandom.m */; };
 		4967241E187638C700A4B67A /* EGeneralMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241D187638C700A4B67A /* EGeneralMath.m */; };
+		4967246B1877460700A4B67A /* EEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967246A1877460700A4B67A /* EEventQueue.m */; };
 		4989C7501873B057001473AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C74F1873B057001473AA /* Cocoa.framework */; };
 		4989C75A1873B057001473AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7581873B057001473AA /* InfoPlist.strings */; };
 		4989C75C1873B057001473AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C75B1873B057001473AA /* main.m */; };
@@ -59,6 +60,8 @@
 		4967241A187634AB00A4B67A /* ERandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERandom.m; sourceTree = "<group>"; };
 		4967241C187638C700A4B67A /* EGeneralMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGeneralMath.h; sourceTree = "<group>"; };
 		4967241D187638C700A4B67A /* EGeneralMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGeneralMath.m; sourceTree = "<group>"; };
+		496724691877460700A4B67A /* EEventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEventQueue.h; sourceTree = "<group>"; };
+		4967246A1877460700A4B67A /* EEventQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEventQueue.m; sourceTree = "<group>"; };
 		4989C74C1873B057001473AA /* FunWithOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4989C74F1873B057001473AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4989C7521873B057001473AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,15 @@
 				4924083D18761D8F006B6A1A /* ECursor.m */,
 			);
 			name = "Window Control";
+			sourceTree = "<group>";
+		};
+		49672468187745EF00A4B67A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				496724691877460700A4B67A /* EEventQueue.h */,
+				4967246A1877460700A4B67A /* EEventQueue.m */,
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 		4989C7431873B057001473AA = {
@@ -226,6 +238,7 @@
 		4989C7881874E2AE001473AA /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				49672468187745EF00A4B67A /* General */,
 				4924083B18761D80006B6A1A /* Window Control */,
 				49240833187616D6006B6A1A /* OpenGL Control */,
 				49B61C26187528E400B966DB /* Geometry */,
@@ -382,6 +395,7 @@
 				4967241E187638C700A4B67A /* EGeneralMath.m in Sources */,
 				49B61C2F18752A3300B966DB /* EPoint.m in Sources */,
 				4989C7631873B057001473AA /* FWOGLAppDelegate.m in Sources */,
+				4967246B1877460700A4B67A /* EEventQueue.m in Sources */,
 				4967241518761F6B00A4B67A /* ETicker.m in Sources */,
 				4924083E18761D8F006B6A1A /* ECursor.m in Sources */,
 				4967241B187634AB00A4B67A /* ERandom.m in Sources */,

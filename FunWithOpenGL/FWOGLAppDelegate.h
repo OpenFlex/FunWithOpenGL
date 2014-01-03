@@ -8,12 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "FWOGLView.h"
+#import "EEventQueue.h"
 
 @interface FWOGLAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) NSWindow *window;
 @property (strong) FWOGLView *view;
-
-@property (strong) NSMutableSet *eventQueue;
 
 @end

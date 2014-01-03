@@ -11,5 +11,6 @@
 @interface ECursor : NSObject
 
 + (void)setMouseShouldHide:(BOOL)shouldHide;
++ (BOOL)hidden;
 
 @end

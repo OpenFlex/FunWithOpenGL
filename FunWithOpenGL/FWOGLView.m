@@ -17,16 +17,12 @@
 @interface FWOGLView ()
 
 @property (nonatomic, assign) BOOL readyToDraw;
-@property (nonatomic, strong) EPoint *position;
 
+@property (nonatomic, strong) EPoint *position;
 @property (nonatomic, strong) ETriangle *triangle;
 @property (nonatomic, strong) EPolygon *cursor;
-
 @property (nonatomic, strong) EGLControl *glControl;
-
 @property (nonatomic, strong) ETicker *ticker;
-
-@property (atomic, weak) NSMutableSet *eventQueue;
 
 @end
 
@@ -37,7 +33,7 @@
     if (self = [super initWithFrame:frameRect pixelFormat:format]) {
         [NSCursor hide];
         self.readyToDraw = YES;
-        self.eventQueue = ((FWOGLAppDelegate *)[NSApplication sharedApplication].delegate).eventQueue;
+        [[EEventQueue sharedInstance] addDelegate:self];
     }
     return self;
 }
@@ -47,7 +43,9 @@
     if (!self.readyToDraw)
         return;
     
-    [self.eventQueue addObject:[NSObject new]];
+    NSLog(@"%f", self.ticker.logicDelta);
+    [[EEventQueue sharedInstance] addObjectToEventQueue:[NSObject new]];
+    [self.ticker logicWasCompleted];
     
     [self.glControl updateViewport];
     [self.glControl updateOrthographicProjectionWithDefault];
@@ -61,8 +59,6 @@
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     [self.cursor setColor:[EColor colorWithRed:0 green:0 blue:0 alpha:0]];
     [self.cursor draw];
-    
-    [self.ticker logicWasUpdated];
     
     glFlush();
     
@@ -86,7 +82,9 @@
     [ECursor setMouseShouldHide:[self.cursor.origin pointInRect:self.bounds]];
     [self.cursor setOrigin:[EPoint pointWithPoint:theEvent.locationInWindow]];
     
-    [self.eventQueue addObject:[NSObject new]];
+    if ([ECursor hidden]) {
+        [[EEventQueue sharedInstance] addObjectToEventQueue:[NSObject new]];
+    }
 }
 
 #pragma mark - Overridden methods
@@ -94,6 +92,13 @@
 - (BOOL)acceptsFirstResponder
 {
     return YES;
+}
+
+#pragma mark - Event queue delegate
+
+- (void)eventQueueWasUpdatedWithEvent:(id)event
+{
+    [self setNeedsDisplay:YES];
 }
 
 #pragma mark - Overridden properties
@@ -138,7 +143,7 @@
     }
     return _cursor;
 }
-     
+
 - (EGLControl *)glControl
 {
     if (_glControl == nil) {
