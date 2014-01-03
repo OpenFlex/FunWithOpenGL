@@ -10,6 +10,8 @@
 #import "ETriangle.h"
 #import "EGLControl.h"
 #import "ECursor.h"
+#import "ETicker.h"
+#import "FWOGLAppDelegate.h"
 #import <OpenGL/gl.h>
 
 @interface FWOGLView ()
@@ -22,6 +24,10 @@
 
 @property (nonatomic, strong) EGLControl *glControl;
 
+@property (nonatomic, strong) ETicker *ticker;
+
+@property (atomic, weak) NSMutableSet *eventQueue;
+
 @end
 
 @implementation FWOGLView
@@ -31,6 +37,7 @@
     if (self = [super initWithFrame:frameRect pixelFormat:format]) {
         [NSCursor hide];
         self.readyToDraw = YES;
+        self.eventQueue = ((FWOGLAppDelegate *)[NSApplication sharedApplication].delegate).eventQueue;
     }
     return self;
 }
@@ -39,6 +46,8 @@
 {
     if (!self.readyToDraw)
         return;
+    
+    [self.eventQueue addObject:[NSObject new]];
     
     [self.glControl updateViewport];
     [self.glControl updateOrthographicProjectionWithDefault];
@@ -53,7 +62,11 @@
     [self.cursor setColor:[EColor colorWithRed:0 green:0 blue:0 alpha:0]];
     [self.cursor draw];
     
+    [self.ticker logicWasUpdated];
+    
     glFlush();
+    
+    [self.ticker drawingWasCompleted];
 }
 
 #pragma mark - Input handling
@@ -73,7 +86,7 @@
     [ECursor setMouseShouldHide:[self.cursor.origin pointInRect:self.bounds]];
     [self.cursor setOrigin:[EPoint pointWithPoint:theEvent.locationInWindow]];
     
-    [self setNeedsDisplay:YES];
+    [self.eventQueue addObject:[NSObject new]];
 }
 
 #pragma mark - Overridden methods
@@ -90,6 +103,13 @@
     return (!_position) ?
     _position = [EPoint pointWithXComponent:0 yComponent:0] :
     _position;
+}
+
+- (ETicker *)ticker
+{
+    return (!_ticker) ?
+    _ticker = [ETicker new] :
+    _ticker;
 }
 
 - (ETriangle *)triangle

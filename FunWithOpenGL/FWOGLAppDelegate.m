@@ -17,8 +17,18 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
 {
     [self initializeWindow];
     [self initializeOpenGLView];
+    [self initializeEventQueue];
     [self.window setContentView:self.view];
     [self.window makeKeyAndOrderFront:self];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        while (true) {
+            if ([self.eventQueue count] > 0) {
+                [self.view setNeedsDisplay:YES];
+                [self.eventQueue removeAllObjects];
+            }
+        }
+    });
 }
 
 - (void)initializeWindow
@@ -40,6 +50,11 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
     self.view = [[FWOGLView alloc] initWithFrame:windowSize pixelFormat:pixelFormat];
     [self.view setWantsBestResolutionOpenGLSurface:YES];
     [self.view setWantsLayer:YES];
+}
+
+- (void)initializeEventQueue
+{
+    self.eventQueue = [NSMutableSet new];
 }
 
 @end

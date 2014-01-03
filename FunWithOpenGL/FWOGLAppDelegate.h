@@ -14,4 +14,6 @@
 @property (strong) NSWindow *window;
 @property (strong) FWOGLView *view;
 
+@property (strong) NSMutableSet *eventQueue;
+
 @end
