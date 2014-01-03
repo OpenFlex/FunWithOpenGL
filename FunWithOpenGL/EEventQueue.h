@@ -8,16 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+@class EEventObject;
+
 @protocol EventQueueDelegate <NSObject>
 
-- (void)eventQueueWasUpdatedWithEvent:(id)event;
+- (void)eventQueueWasUpdatedWithEvent:(EEventObject *)event;
 
 @end
 
+typedef void (^CompletionHandler)();
+
 @interface EEventQueue : NSMutableSet
 
-@property (readonly) NSMutableSet *eventQueue;
-@property (strong) NSMutableSet *delegates;
+@property (strong, readonly) NSMutableSet *eventQueue;
+@property (strong, readonly) NSMutableSet *delegates;
 
 + (EEventQueue *)sharedInstance;
 
@@ -27,8 +31,8 @@
 
 - (void)addDelegate:(id <EventQueueDelegate>)delegate;
 - (void)removeDelegate:(id <EventQueueDelegate>)delegate;
-- (void)updateDelegates;
+- (void)updateDelegatesWithEventObject:(EEventObject *)eventObject;
 
-- (void)initializeTimer;
+- (void)update;
 
 @end

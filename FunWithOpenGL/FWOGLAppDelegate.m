@@ -24,7 +24,7 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
     [self.window setContentView:self.view];
     [self.window makeKeyAndOrderFront:self];
     
-    [[EEventQueue sharedInstance] initializeTimer];
+    [[EGame sharedInstance] initializeTimer];
 }
 
 - (void)initializeWindow

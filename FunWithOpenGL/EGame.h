@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ETicker.h"
 
 typedef NS_ENUM(NSInteger, GameState) {
     RUNNING,
@@ -15,7 +16,13 @@ typedef NS_ENUM(NSInteger, GameState) {
 
 @interface EGame : NSObject
 
+@property (nonatomic, strong) ETicker *ticker;
+@property (nonatomic, assign) GameState gameState;
+
++ (EGame *)sharedInstance;
+
+- (void)initializeTimer;
 - (void)gameLoop;
-- (void)setGameState:(GameState)state;
+- (void)toggleGameState;
 
 @end

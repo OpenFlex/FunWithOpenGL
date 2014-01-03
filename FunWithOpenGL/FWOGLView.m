@@ -12,6 +12,7 @@
 #import "ECursor.h"
 #import "ETicker.h"
 #import "FWOGLAppDelegate.h"
+#import "EGame.h"
 #import <OpenGL/gl.h>
 
 @interface FWOGLView ()
@@ -22,7 +23,8 @@
 @property (nonatomic, strong) ETriangle *triangle;
 @property (nonatomic, strong) EPolygon *cursor;
 @property (nonatomic, strong) EGLControl *glControl;
-@property (nonatomic, strong) ETicker *ticker;
+
+@property (nonatomic, strong) ETriangle *fallingTriangle;
 
 @end
 
@@ -43,17 +45,20 @@
     if (!self.readyToDraw)
         return;
     
-    NSLog(@"%f", self.ticker.logicDelta);
-    [[EEventQueue sharedInstance] addObjectToEventQueue:[NSObject new]];
-    [self.ticker logicWasCompleted];
+    [[EEventQueue sharedInstance] addObjectToEventQueue:[EEventObject initWithEventBlock:^{
+        [self.triangle setColor:[EColor randomColor]];
+        CGFloat verticalDisplacement = -20 * [[EGame sharedInstance].ticker logicDelta];
+        [self.fallingTriangle translateWithVector:[EVector vectorWithXComponent:0 yComponent:verticalDisplacement]];
+        [self setNeedsDisplayInRect:NSMakeRect(self.triangle.origin.x, self.triangle.origin.y, 100, 100)];
+    }]];
     
     [self.glControl updateViewport];
     [self.glControl updateOrthographicProjectionWithDefault];
     [self.glControl clearBackground];
     
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    [self.triangle setColor:[EColor randomColor]];
     [self.triangle draw];
+    [self.fallingTriangle draw];
     [self.cursor setColor:[EColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0]];
     [self.cursor draw];
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -61,8 +66,6 @@
     [self.cursor draw];
     
     glFlush();
-    
-    [self.ticker drawingWasCompleted];
 }
 
 #pragma mark - Input handling
@@ -81,10 +84,17 @@
 {
     [ECursor setMouseShouldHide:[self.cursor.origin pointInRect:self.bounds]];
     [self.cursor setOrigin:[EPoint pointWithPoint:theEvent.locationInWindow]];
-    
-    if ([ECursor hidden]) {
-        [[EEventQueue sharedInstance] addObjectToEventQueue:[NSObject new]];
+    if ([ECursor hidden] && [EGame sharedInstance].gameState == RUNNING) {
+        [[EEventQueue sharedInstance] addObjectToEventQueue:[ECursorEventObject initWithEventBlock:^{
+            [self.cursor setOrigin:[EPoint pointWithPoint:theEvent.locationInWindow]];
+            [self setNeedsDisplayInRect:NSMakeRect(self.cursor.origin.x, self.cursor.origin.y, 20, 20)];
+        }]];
     }
+}
+
+- (void)keyDown:(NSEvent *)theEvent
+{
+    [[EGame sharedInstance] toggleGameState];
 }
 
 #pragma mark - Overridden methods
@@ -96,9 +106,11 @@
 
 #pragma mark - Event queue delegate
 
-- (void)eventQueueWasUpdatedWithEvent:(id)event
+- (void)eventQueueWasUpdatedWithEvent:(EEventObject *)event
 {
-    [self setNeedsDisplay:YES];
+    if (event.eventBlock) {
+        event.eventBlock();
+    }
 }
 
 #pragma mark - Overridden properties
@@ -108,13 +120,6 @@
     return (!_position) ?
     _position = [EPoint pointWithXComponent:0 yComponent:0] :
     _position;
-}
-
-- (ETicker *)ticker
-{
-    return (!_ticker) ?
-    _ticker = [ETicker new] :
-    _ticker;
 }
 
 - (ETriangle *)triangle
@@ -127,6 +132,16 @@
     }
     
     return _triangle;
+}
+
+- (ETriangle *)fallingTriangle
+{
+    if (!_fallingTriangle) {
+        EPoint *viewCenter = [EPoint pointWithXComponent:190 yComponent:300];
+        _fallingTriangle = [ETriangle eqilateralTriangleCenteredAtPoint:viewCenter withSideLength:20];
+        [_fallingTriangle setColor:[EColor colorWithColor:[NSColor orangeColor]]];
+    }
+    return _fallingTriangle;
 }
 
 - (EPolygon *)cursor

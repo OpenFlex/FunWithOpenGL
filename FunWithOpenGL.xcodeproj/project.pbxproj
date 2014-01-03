@@ -15,6 +15,7 @@
 		4967241B187634AB00A4B67A /* ERandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241A187634AB00A4B67A /* ERandom.m */; };
 		4967241E187638C700A4B67A /* EGeneralMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241D187638C700A4B67A /* EGeneralMath.m */; };
 		4967246B1877460700A4B67A /* EEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967246A1877460700A4B67A /* EEventQueue.m */; };
+		4967246F187768A200A4B67A /* EEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967246E187768A200A4B67A /* EEventObject.m */; };
 		4989C7501873B057001473AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C74F1873B057001473AA /* Cocoa.framework */; };
 		4989C75A1873B057001473AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7581873B057001473AA /* InfoPlist.strings */; };
 		4989C75C1873B057001473AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C75B1873B057001473AA /* main.m */; };
@@ -28,6 +29,7 @@
 		4989C7851873B0BD001473AA /* FWOGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7841873B0BD001473AA /* FWOGLView.m */; };
 		4989C7871873B320001473AA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C7861873B320001473AA /* OpenGL.framework */; };
 		4989C78B1874E2BF001473AA /* EVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C78A1874E2BF001473AA /* EVector.m */; };
+		499444071877700F00D91793 /* ECursorEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 499444061877700F00D91793 /* ECursorEventObject.m */; };
 		49B61C29187528FD00B966DB /* ETriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C28187528FD00B966DB /* ETriangle.m */; };
 		49B61C2F18752A3300B966DB /* EPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C2E18752A3300B966DB /* EPoint.m */; };
 		49B61C3218752C0C00B966DB /* EGeometric.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C3118752C0C00B966DB /* EGeometric.m */; };
@@ -62,6 +64,8 @@
 		4967241D187638C700A4B67A /* EGeneralMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGeneralMath.m; sourceTree = "<group>"; };
 		496724691877460700A4B67A /* EEventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEventQueue.h; sourceTree = "<group>"; };
 		4967246A1877460700A4B67A /* EEventQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEventQueue.m; sourceTree = "<group>"; };
+		4967246D187768A200A4B67A /* EEventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEventObject.h; sourceTree = "<group>"; };
+		4967246E187768A200A4B67A /* EEventObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEventObject.m; sourceTree = "<group>"; };
 		4989C74C1873B057001473AA /* FunWithOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4989C74F1873B057001473AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4989C7521873B057001473AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -86,6 +90,8 @@
 		4989C7891874E2BF001473AA /* EVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVector.h; sourceTree = "<group>"; };
 		4989C78A1874E2BF001473AA /* EVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVector.m; sourceTree = "<group>"; };
 		4989C78D1874E757001473AA /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		499444051877700F00D91793 /* ECursorEventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECursorEventObject.h; sourceTree = "<group>"; };
+		499444061877700F00D91793 /* ECursorEventObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECursorEventObject.m; sourceTree = "<group>"; };
 		49B61C27187528FD00B966DB /* ETriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETriangle.h; sourceTree = "<group>"; };
 		49B61C28187528FD00B966DB /* ETriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETriangle.m; sourceTree = "<group>"; };
 		49B61C2D18752A3300B966DB /* EPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPoint.h; sourceTree = "<group>"; };
@@ -145,10 +151,21 @@
 		49672468187745EF00A4B67A /* General */ = {
 			isa = PBXGroup;
 			children = (
-				496724691877460700A4B67A /* EEventQueue.h */,
-				4967246A1877460700A4B67A /* EEventQueue.m */,
 			);
 			name = General;
+			sourceTree = "<group>";
+		};
+		4967246C1877688F00A4B67A /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				496724691877460700A4B67A /* EEventQueue.h */,
+				4967246A1877460700A4B67A /* EEventQueue.m */,
+				4967246D187768A200A4B67A /* EEventObject.h */,
+				4967246E187768A200A4B67A /* EEventObject.m */,
+				499444051877700F00D91793 /* ECursorEventObject.h */,
+				499444061877700F00D91793 /* ECursorEventObject.m */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		4989C7431873B057001473AA = {
@@ -238,6 +255,7 @@
 		4989C7881874E2AE001473AA /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				4967246C1877688F00A4B67A /* Events */,
 				49672468187745EF00A4B67A /* General */,
 				4924083B18761D80006B6A1A /* Window Control */,
 				49240833187616D6006B6A1A /* OpenGL Control */,
@@ -391,6 +409,7 @@
 				4989C7851873B0BD001473AA /* FWOGLView.m in Sources */,
 				49B61C38187533C300B966DB /* ETrig.m in Sources */,
 				492408361876176F006B6A1A /* EGLControl.m in Sources */,
+				4967246F187768A200A4B67A /* EEventObject.m in Sources */,
 				496724181876202700A4B67A /* EGame.m in Sources */,
 				4967241E187638C700A4B67A /* EGeneralMath.m in Sources */,
 				49B61C2F18752A3300B966DB /* EPoint.m in Sources */,
@@ -399,6 +418,7 @@
 				4967241518761F6B00A4B67A /* ETicker.m in Sources */,
 				4924083E18761D8F006B6A1A /* ECursor.m in Sources */,
 				4967241B187634AB00A4B67A /* ERandom.m in Sources */,
+				499444071877700F00D91793 /* ECursorEventObject.m in Sources */,
 				4924083918761B95006B6A1A /* EPolygon.m in Sources */,
 				4989C78B1874E2BF001473AA /* EVector.m in Sources */,
 				4989C75C1873B057001473AA /* main.m in Sources */,

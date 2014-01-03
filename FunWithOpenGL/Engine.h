@@ -19,5 +19,8 @@
 #import "ERandom.h"
 #import "EGeneralMath.h"
 #import "EEventQueue.h"
+#import "EEventObject.h"
+#import "EGame.h"
+#import "ECursorEventObject.h"
 
 #endif

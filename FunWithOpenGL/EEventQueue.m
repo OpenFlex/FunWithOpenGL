@@ -12,11 +12,9 @@
 @interface EEventQueue ()
 
 @property (readwrite) NSMutableSet *eventQueue;
-@property (strong) ETicker *ticker;
+@property (readwrite) NSMutableSet *delegates;
 
 @end
-
-static dispatch_source_t timerSource;
 
 @implementation EEventQueue
 
@@ -61,37 +59,25 @@ static dispatch_source_t timerSource;
     [self.delegates removeObject:delegate];
 }
 
-- (void)updateDelegates
+- (void)updateDelegatesWithEventObject:(EEventObject *)eventObject
 {
     for (id <EventQueueDelegate> delegate in self.delegates) {
         if ([delegate respondsToSelector:@selector(eventQueueWasUpdatedWithEvent:)]) {
-            [delegate eventQueueWasUpdatedWithEvent:[NSObject new]];
+            [delegate eventQueueWasUpdatedWithEvent:eventObject];
         }
     }
 }
 
-#pragma mark - Tick method
-
-- (void)initializeTimer
+- (void)update
 {
-    timerSource = [self createDispatchTimerWithTimeInterval:10000000 leeway:1000 dispatchQueue:dispatch_get_main_queue() executionBlock:^{
-        
-        if ([self.eventQueue count] > 0) {
-            [self updateDelegates];
-            [self removeAllObjectsFromEventQueue];
+    if ([self.eventQueue count] > 0) {
+        for (int i = 0; i < self.eventQueue.count; i++) {
+            EEventObject *object = [self.eventQueue anyObject];
+            [self updateDelegatesWithEventObject:object];
+            [self removeObjectFromEventQueue:object];
+            i--;
         }
-    }];
-}
-
-- (dispatch_source_t)createDispatchTimerWithTimeInterval:(uint64_t)interval leeway:(uint64_t)leeway dispatchQueue:(dispatch_queue_t)queue executionBlock:(dispatch_block_t)block
-{
-    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    if (timer) {
-        dispatch_source_set_timer(timer, 0, interval, leeway);
-        dispatch_source_set_event_handler(timer, block);
-        dispatch_resume(timer);
     }
-    return timer;
 }
 
 @end
