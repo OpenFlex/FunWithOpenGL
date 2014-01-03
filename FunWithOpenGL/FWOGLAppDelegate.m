@@ -7,12 +7,45 @@
 //
 
 #import "FWOGLAppDelegate.h"
+#import "FWOGLView.h"
+
+static const NSRect windowSize = {{0, 0}, {480, 360}};
 
 @implementation FWOGLAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [self initializeWindow];
+    [self initializeOpenGLView];
+    [self.window setContentView:self.view];
+    [self.window makeKeyAndOrderFront:self];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        while (true) {
+           // [self.view setNeedsDisplay:YES];
+        }
+    });
+}
+
+- (void)initializeWindow
+{
+    self.window = [[NSWindow alloc] initWithContentRect:windowSize
+                                              styleMask:(NSTitledWindowMask)
+                                                backing:NSBackingStoreBuffered defer:YES];
+    [self.window setTitle:@"FunWithOpenGL"];
+    [self.window setShowsResizeIndicator:YES];
+    [self.window setAcceptsMouseMovedEvents:YES];
+    [self.window setFrameOrigin:NSMakePoint((NSWidth([NSScreen mainScreen].frame) - NSWidth(windowSize)) / 2,
+                                            (NSHeight([NSScreen mainScreen].frame) - NSHeight(windowSize)) / 2)];
+}
+
+- (void)initializeOpenGLView
+{
+    NSOpenGLPixelFormatAttribute attributes[] = { NSOpenGLPFADoubleBuffer, 0 };
+    NSOpenGLPixelFormat *pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attributes];
+    self.view = [[FWOGLView alloc] initWithFrame:windowSize pixelFormat:pixelFormat];
+    [self.view setWantsBestResolutionOpenGLSurface:YES];
+    [self.view setWantsLayer:YES];
 }
 
 @end

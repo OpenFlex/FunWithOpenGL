@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FWOGLView.h"
 
 @interface FWOGLAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) NSWindow *window;
+@property (strong) FWOGLView *view;
 
 @end

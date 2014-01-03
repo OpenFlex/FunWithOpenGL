@@ -7,17 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492408361876176F006B6A1A /* EGLControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 492408351876176F006B6A1A /* EGLControl.m */; };
+		4924083918761B95006B6A1A /* EPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924083818761B95006B6A1A /* EPolygon.m */; };
+		4924083E18761D8F006B6A1A /* ECursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924083D18761D8F006B6A1A /* ECursor.m */; };
+		4967241518761F6B00A4B67A /* ETicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241418761F6B00A4B67A /* ETicker.m */; };
+		496724181876202700A4B67A /* EGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 496724171876202700A4B67A /* EGame.m */; };
+		4967241B187634AB00A4B67A /* ERandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241A187634AB00A4B67A /* ERandom.m */; };
+		4967241E187638C700A4B67A /* EGeneralMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241D187638C700A4B67A /* EGeneralMath.m */; };
 		4989C7501873B057001473AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C74F1873B057001473AA /* Cocoa.framework */; };
 		4989C75A1873B057001473AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7581873B057001473AA /* InfoPlist.strings */; };
 		4989C75C1873B057001473AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C75B1873B057001473AA /* main.m */; };
 		4989C7601873B057001473AA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4989C75E1873B057001473AA /* Credits.rtf */; };
 		4989C7631873B057001473AA /* FWOGLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7621873B057001473AA /* FWOGLAppDelegate.m */; };
-		4989C7661873B057001473AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7641873B057001473AA /* MainMenu.xib */; };
 		4989C7681873B057001473AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7671873B057001473AA /* Images.xcassets */; };
 		4989C76F1873B057001473AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C76E1873B057001473AA /* XCTest.framework */; };
 		4989C7701873B057001473AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C74F1873B057001473AA /* Cocoa.framework */; };
 		4989C7781873B057001473AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7761873B057001473AA /* InfoPlist.strings */; };
 		4989C77A1873B057001473AA /* FunWithOpenGLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7791873B057001473AA /* FunWithOpenGLTests.m */; };
+		4989C7851873B0BD001473AA /* FWOGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7841873B0BD001473AA /* FWOGLView.m */; };
+		4989C7871873B320001473AA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C7861873B320001473AA /* OpenGL.framework */; };
+		4989C78B1874E2BF001473AA /* EVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C78A1874E2BF001473AA /* EVector.m */; };
+		49B61C29187528FD00B966DB /* ETriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C28187528FD00B966DB /* ETriangle.m */; };
+		49B61C2F18752A3300B966DB /* EPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C2E18752A3300B966DB /* EPoint.m */; };
+		49B61C3218752C0C00B966DB /* EGeometric.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C3118752C0C00B966DB /* EGeometric.m */; };
+		49B61C3518752C3500B966DB /* EColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C3418752C3500B966DB /* EColor.m */; };
+		49B61C38187533C300B966DB /* ETrig.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C37187533C300B966DB /* ETrig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +45,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492408341876176F006B6A1A /* EGLControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGLControl.h; sourceTree = "<group>"; };
+		492408351876176F006B6A1A /* EGLControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGLControl.m; sourceTree = "<group>"; };
+		4924083718761B95006B6A1A /* EPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPolygon.h; sourceTree = "<group>"; };
+		4924083818761B95006B6A1A /* EPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPolygon.m; sourceTree = "<group>"; };
+		4924083C18761D8F006B6A1A /* ECursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECursor.h; sourceTree = "<group>"; };
+		4924083D18761D8F006B6A1A /* ECursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECursor.m; sourceTree = "<group>"; };
+		4967241318761F6B00A4B67A /* ETicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETicker.h; sourceTree = "<group>"; };
+		4967241418761F6B00A4B67A /* ETicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETicker.m; sourceTree = "<group>"; };
+		496724161876202700A4B67A /* EGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGame.h; sourceTree = "<group>"; };
+		496724171876202700A4B67A /* EGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGame.m; sourceTree = "<group>"; };
+		49672419187634AB00A4B67A /* ERandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERandom.h; sourceTree = "<group>"; };
+		4967241A187634AB00A4B67A /* ERandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERandom.m; sourceTree = "<group>"; };
+		4967241C187638C700A4B67A /* EGeneralMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGeneralMath.h; sourceTree = "<group>"; };
+		4967241D187638C700A4B67A /* EGeneralMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGeneralMath.m; sourceTree = "<group>"; };
 		4989C74C1873B057001473AA /* FunWithOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4989C74F1873B057001473AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4989C7521873B057001473AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -43,13 +71,28 @@
 		4989C75F1873B057001473AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4989C7611873B057001473AA /* FWOGLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWOGLAppDelegate.h; sourceTree = "<group>"; };
 		4989C7621873B057001473AA /* FWOGLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWOGLAppDelegate.m; sourceTree = "<group>"; };
-		4989C7651873B057001473AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4989C7671873B057001473AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4989C76D1873B057001473AA /* FunWithOpenGLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunWithOpenGLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4989C76E1873B057001473AA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4989C7751873B057001473AA /* FunWithOpenGLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunWithOpenGLTests-Info.plist"; sourceTree = "<group>"; };
 		4989C7771873B057001473AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4989C7791873B057001473AA /* FunWithOpenGLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunWithOpenGLTests.m; sourceTree = "<group>"; };
+		4989C7831873B0BD001473AA /* FWOGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWOGLView.h; sourceTree = "<group>"; };
+		4989C7841873B0BD001473AA /* FWOGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWOGLView.m; sourceTree = "<group>"; };
+		4989C7861873B320001473AA /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		4989C7891874E2BF001473AA /* EVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVector.h; sourceTree = "<group>"; };
+		4989C78A1874E2BF001473AA /* EVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVector.m; sourceTree = "<group>"; };
+		4989C78D1874E757001473AA /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		49B61C27187528FD00B966DB /* ETriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETriangle.h; sourceTree = "<group>"; };
+		49B61C28187528FD00B966DB /* ETriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETriangle.m; sourceTree = "<group>"; };
+		49B61C2D18752A3300B966DB /* EPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPoint.h; sourceTree = "<group>"; };
+		49B61C2E18752A3300B966DB /* EPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPoint.m; sourceTree = "<group>"; };
+		49B61C3018752C0C00B966DB /* EGeometric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGeometric.h; sourceTree = "<group>"; };
+		49B61C3118752C0C00B966DB /* EGeometric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGeometric.m; sourceTree = "<group>"; };
+		49B61C3318752C3500B966DB /* EColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColor.h; sourceTree = "<group>"; };
+		49B61C3418752C3500B966DB /* EColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColor.m; sourceTree = "<group>"; };
+		49B61C36187533C300B966DB /* ETrig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETrig.h; sourceTree = "<group>"; };
+		49B61C37187533C300B966DB /* ETrig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETrig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4989C7871873B320001473AA /* OpenGL.framework in Frameworks */,
 				4989C7501873B057001473AA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +117,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49240833187616D6006B6A1A /* OpenGL Control */ = {
+			isa = PBXGroup;
+			children = (
+				492408341876176F006B6A1A /* EGLControl.h */,
+				492408351876176F006B6A1A /* EGLControl.m */,
+				4967241318761F6B00A4B67A /* ETicker.h */,
+				4967241418761F6B00A4B67A /* ETicker.m */,
+				496724161876202700A4B67A /* EGame.h */,
+				496724171876202700A4B67A /* EGame.m */,
+			);
+			name = "OpenGL Control";
+			sourceTree = "<group>";
+		};
+		4924083B18761D80006B6A1A /* Window Control */ = {
+			isa = PBXGroup;
+			children = (
+				4924083C18761D8F006B6A1A /* ECursor.h */,
+				4924083D18761D8F006B6A1A /* ECursor.m */,
+			);
+			name = "Window Control";
+			sourceTree = "<group>";
+		};
 		4989C7431873B057001473AA = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +161,7 @@
 		4989C74E1873B057001473AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4989C7861873B320001473AA /* OpenGL.framework */,
 				4989C74F1873B057001473AA /* Cocoa.framework */,
 				4989C76E1873B057001473AA /* XCTest.framework */,
 				4989C7511873B057001473AA /* Other Frameworks */,
@@ -115,9 +182,11 @@
 		4989C7551873B057001473AA /* FunWithOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				4989C7881874E2AE001473AA /* Engine */,
 				4989C7611873B057001473AA /* FWOGLAppDelegate.h */,
 				4989C7621873B057001473AA /* FWOGLAppDelegate.m */,
-				4989C7641873B057001473AA /* MainMenu.xib */,
+				4989C7831873B0BD001473AA /* FWOGLView.h */,
+				4989C7841873B0BD001473AA /* FWOGLView.m */,
 				4989C7671873B057001473AA /* Images.xcassets */,
 				4989C7561873B057001473AA /* Supporting Files */,
 			);
@@ -152,6 +221,58 @@
 				4989C7761873B057001473AA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4989C7881874E2AE001473AA /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				4924083B18761D80006B6A1A /* Window Control */,
+				49240833187616D6006B6A1A /* OpenGL Control */,
+				49B61C26187528E400B966DB /* Geometry */,
+				4989C78E1874EEDD001473AA /* Categories */,
+				4989C78C1874E73B001473AA /* Math */,
+				4989C78D1874E757001473AA /* Engine.h */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		4989C78C1874E73B001473AA /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				4989C7891874E2BF001473AA /* EVector.h */,
+				4989C78A1874E2BF001473AA /* EVector.m */,
+				49B61C36187533C300B966DB /* ETrig.h */,
+				49B61C37187533C300B966DB /* ETrig.m */,
+				49672419187634AB00A4B67A /* ERandom.h */,
+				4967241A187634AB00A4B67A /* ERandom.m */,
+				4967241C187638C700A4B67A /* EGeneralMath.h */,
+				4967241D187638C700A4B67A /* EGeneralMath.m */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		4989C78E1874EEDD001473AA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		49B61C26187528E400B966DB /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				49B61C27187528FD00B966DB /* ETriangle.h */,
+				49B61C28187528FD00B966DB /* ETriangle.m */,
+				49B61C2D18752A3300B966DB /* EPoint.h */,
+				49B61C2E18752A3300B966DB /* EPoint.m */,
+				49B61C3018752C0C00B966DB /* EGeometric.h */,
+				49B61C3118752C0C00B966DB /* EGeometric.m */,
+				49B61C3318752C3500B966DB /* EColor.h */,
+				49B61C3418752C3500B966DB /* EColor.m */,
+				4924083718761B95006B6A1A /* EPolygon.h */,
+				4924083818761B95006B6A1A /* EPolygon.m */,
+			);
+			name = Geometry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +355,6 @@
 				4989C75A1873B057001473AA /* InfoPlist.strings in Resources */,
 				4989C7681873B057001473AA /* Images.xcassets in Resources */,
 				4989C7601873B057001473AA /* Credits.rtf in Resources */,
-				4989C7661873B057001473AA /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +373,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B61C29187528FD00B966DB /* ETriangle.m in Sources */,
+				49B61C3218752C0C00B966DB /* EGeometric.m in Sources */,
+				4989C7851873B0BD001473AA /* FWOGLView.m in Sources */,
+				49B61C38187533C300B966DB /* ETrig.m in Sources */,
+				492408361876176F006B6A1A /* EGLControl.m in Sources */,
+				496724181876202700A4B67A /* EGame.m in Sources */,
+				4967241E187638C700A4B67A /* EGeneralMath.m in Sources */,
+				49B61C2F18752A3300B966DB /* EPoint.m in Sources */,
 				4989C7631873B057001473AA /* FWOGLAppDelegate.m in Sources */,
+				4967241518761F6B00A4B67A /* ETicker.m in Sources */,
+				4924083E18761D8F006B6A1A /* ECursor.m in Sources */,
+				4967241B187634AB00A4B67A /* ERandom.m in Sources */,
+				4924083918761B95006B6A1A /* EPolygon.m in Sources */,
+				4989C78B1874E2BF001473AA /* EVector.m in Sources */,
 				4989C75C1873B057001473AA /* main.m in Sources */,
+				49B61C3518752C3500B966DB /* EColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,14 +425,6 @@
 				4989C75F1873B057001473AA /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		4989C7641873B057001473AA /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4989C7651873B057001473AA /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		4989C7761873B057001473AA /* InfoPlist.strings */ = {
@@ -465,6 +591,7 @@
 				4989C77F1873B057001473AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4989C7801873B057001473AA /* Build configuration list for PBXNativeTarget "FunWithOpenGLTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +600,7 @@
 				4989C7821873B057001473AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
