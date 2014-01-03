@@ -19,12 +19,6 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
     [self initializeOpenGLView];
     [self.window setContentView:self.view];
     [self.window makeKeyAndOrderFront:self];
-
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        while (true) {
-           // [self.view setNeedsDisplay:YES];
-        }
-    });
 }
 
 - (void)initializeWindow
