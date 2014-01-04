@@ -29,6 +29,7 @@ static dispatch_source_t timerSource;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EGame new];
         sharedInstance.gameState = RUNNING;
+        sharedInstance.desiredFrameRate = 60.0;
     });
     return sharedInstance;
 }
@@ -38,16 +39,13 @@ static dispatch_source_t timerSource;
 - (void)gameLoop
 {
     if (self.gameState == RUNNING) {
-        if (self.ticker.logicDelta > 1.0 / 60.0) {
+        if (self.ticker.logicDelta > 1.0 / self.desiredFrameRate) {
             [[EEventQueue sharedInstance] update];
             [self.ticker logicWasCompleted];
         }
-    } else {
-        //NSLog(@"Paused");
+    } else if (self.gameState == PAUSED) {
         [self.ticker logicWasCompleted];
     }
-    
-    
 }
 
 - (void)toggleGameState
@@ -64,7 +62,7 @@ static dispatch_source_t timerSource;
 - (void)initializeTimer
 {
     NSInteger nanosecondFractional = 1000000000;
-    timerSource = [self createDispatchTimerWithTimeInterval:0.01 * nanosecondFractional leeway: 0.01 * nanosecondFractional dispatchQueue:dispatch_get_main_queue() executionBlock:^{
+    timerSource = [self createDispatchTimerWithTimeInterval:1.0/self.desiredFrameRate * nanosecondFractional leeway: 0.5/self.desiredFrameRate * nanosecondFractional dispatchQueue:dispatch_get_main_queue() executionBlock:^{
         [self gameLoop];
     }];
     

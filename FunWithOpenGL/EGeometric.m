@@ -15,6 +15,10 @@
 
 - (void)draw
 {
+    if (self.animationBlock) {
+        [[EEventQueue sharedInstance] addObjectToEventQueue:[EEventObject initWithEventBlock:self.animationBlock]];
+    }
+    
     glColor3f(self.color.red, self.color.green, self.color.blue);
     glBegin([self convertShapeToGLenum]);
     for (EPoint *point in self.points) {

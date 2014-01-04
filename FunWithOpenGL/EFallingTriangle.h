@@ -1,13 +1,13 @@
 //
-//  ECursorEventObject.h
+//  EFallingTriangle.h
 //  FunWithOpenGL
 //
 //  Created by Josh Grant on 1/3/14.
 //  Copyright (c) 2014 Deloitte. All rights reserved.
 //
 
-#import "EEventObject.h"
+#import "ETriangle.h"
 
-@interface ECursorEventObject : EEventObject
+@interface EFallingTriangle : ETriangle
 
 @end

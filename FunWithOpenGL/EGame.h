@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, GameState) {
 @property (nonatomic, strong) ETicker *ticker;
 @property (nonatomic, assign) GameState gameState;
 
+@property (nonatomic, assign) CGFloat desiredFrameRate;
+
 + (EGame *)sharedInstance;
 
 - (void)initializeTimer;

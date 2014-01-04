@@ -21,6 +21,8 @@
 #import "EEventQueue.h"
 #import "EEventObject.h"
 #import "EGame.h"
-#import "ECursorEventObject.h"
+#import "ECursorShape.h"
+#import "EInput.h"
+#import "EObjectController.h"
 
 #endif

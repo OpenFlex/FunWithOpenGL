@@ -10,6 +10,7 @@
 
 @interface EGLControl : NSObject
 
+@property (nonatomic, assign) BOOL readyToDraw;
 @property (nonatomic, weak) NSView *operatingView;
 @property (nonatomic, strong) EColor *clearColor;
 

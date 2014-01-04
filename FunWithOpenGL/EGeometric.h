@@ -22,9 +22,13 @@ typedef NS_ENUM(NSInteger, Shape) {
     POLYGON,
 };
 
+typedef void(^AnimationBlock)();
+
 @interface EGeometric : NSObject
 
 @property (nonatomic, assign) Shape shape;
+@property (copy) AnimationBlock animationBlock;
+
 @property (nonatomic, strong) EColor *color;
 @property (nonatomic, strong) EPoint *origin;
 @property (nonatomic, strong) NSArray *points;

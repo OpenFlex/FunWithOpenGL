@@ -11,10 +11,6 @@
 
 static const NSRect windowSize = {{0, 0}, {480, 360}};
 
-@interface FWOGLAppDelegate ()
-
-@end
-
 @implementation FWOGLAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -30,11 +26,12 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
 - (void)initializeWindow
 {
     self.window = [[NSWindow alloc] initWithContentRect:windowSize
-                                              styleMask:(NSTitledWindowMask)
+                                              styleMask:(NSTitledWindowMask | NSResizableWindowMask)
                                                 backing:NSBackingStoreBuffered defer:YES];
     [self.window setTitle:@"FunWithOpenGL"];
     [self.window setShowsResizeIndicator:YES];
     [self.window setAcceptsMouseMovedEvents:YES];
+    [self.window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
     [self.window setFrameOrigin:NSMakePoint((NSWidth([NSScreen mainScreen].frame) - NSWidth(windowSize)) / 2,
                                             (NSHeight([NSScreen mainScreen].frame) - NSHeight(windowSize)) / 2)];
 }
