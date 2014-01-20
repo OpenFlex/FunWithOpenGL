@@ -3,7 +3,7 @@
 //  FunWithOpenGL
 //
 //  Created by Josh Grant on 1/2/14.
-//  Copyright (c) 2014 Deloitte. All rights reserved.
+//  Copyright (c) 2014 Bordex. All rights reserved.
 //
 
 #import "EGLControl.h"
@@ -33,9 +33,9 @@
 
 - (void)updateViewport
 {
-    NSRect backingBounds = [self.operatingView convertRectToBacking:[self.operatingView bounds]];
-    GLsizei backingPixelWidth  = (GLsizei)(backingBounds.size.width),
-    backingPixelHeight = (GLsizei)(backingBounds.size.height);
+    NSRect backingBounds = [self.operatingView convertRectToBacking:
+                            [self.operatingView bounds]];
+    GLsizei backingPixelWidth = (GLsizei)(backingBounds.size.width), backingPixelHeight = (GLsizei)(backingBounds.size.height);
     glViewport(0, 0, backingPixelWidth, backingPixelHeight);
 //    glViewport(0, 0, NSWidth(self.operatingView.bounds), NSHeight(self.operatingView.bounds));
 //    [self updateOrthographicProjectionWithDefault];

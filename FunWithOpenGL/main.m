@@ -3,7 +3,7 @@
 //  FunWithOpenGL
 //
 //  Created by Josh Grant on 12/31/13.
-//  Copyright (c) 2013 Deloitte. All rights reserved.
+//  Copyright (c) 2013 Bordex. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

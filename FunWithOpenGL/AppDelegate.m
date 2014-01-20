@@ -3,13 +3,11 @@
 //  FunWithOpenGL
 //
 //  Created by Josh Grant on 12/31/13.
-//  Copyright (c) 2013 Deloitte. All rights reserved.
+//  Copyright (c) 2013 Bordex. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import "MainView.h"
-
-static const NSRect windowSize = {{0, 0}, {480, 360}};
 
 @implementation AppDelegate
 
@@ -20,26 +18,28 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
     [self.window setContentView:self.view];
     [self.window makeKeyAndOrderFront:self];
     
-    [[EGame sharedInstance] initializeTimer];
+    [GameManager sharedInstance];
 }
 
 - (void)initializeWindow
 {
-    self.window = [[NSWindow alloc] initWithContentRect:windowSize
+    self.window = [[NSWindow alloc] initWithContentRect:[WindowManager sharedInstance].defaultFrame
                                               styleMask:(NSTitledWindowMask | NSResizableWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask)
-                                                backing:NSBackingStoreBuffered defer:YES];
+                                                backing:NSBackingStoreBuffered
+                                                  defer:YES];
     [self.window setTitle:@"FunWithOpenGL"];
     [self.window setShowsResizeIndicator:YES];
     [self.window setAcceptsMouseMovedEvents:YES];
-    [self.window setFrameOrigin:NSMakePoint((NSWidth([NSScreen mainScreen].frame) - NSWidth(windowSize)) / 2,
-                                            (NSHeight([NSScreen mainScreen].frame) - NSHeight(windowSize)) / 2)];
+    [self.window setFrameOrigin:[WindowManager sharedInstance].frameOrigin];
 }
 
 - (void)initializeOpenGLView
 {
     NSOpenGLPixelFormatAttribute attributes[] = { NSOpenGLPFADoubleBuffer, 0 };
     NSOpenGLPixelFormat *pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attributes];
-    self.view = [[MainView alloc] initWithFrame:windowSize pixelFormat:pixelFormat];
+    
+    self.view = [[MainView alloc] initWithFrame:[WindowManager sharedInstance].defaultFrame
+                                    pixelFormat:pixelFormat];
     [self.view setWantsBestResolutionOpenGLSurface:YES];
     [self.view setWantsLayer:YES];
 }

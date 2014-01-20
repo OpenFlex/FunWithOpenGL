@@ -7,28 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49101C80188CA92600E628B4 /* Level1.m in Sources */ = {isa = PBXBuildFile; fileRef = 49101C7F188CA92600E628B4 /* Level1.m */; };
-		492408361876176F006B6A1A /* EGLControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 492408351876176F006B6A1A /* EGLControl.m */; };
-		4924083918761B95006B6A1A /* EPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924083818761B95006B6A1A /* EPolygon.m */; };
-		4924083E18761D8F006B6A1A /* ECursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924083D18761D8F006B6A1A /* ECursor.m */; };
-		494405EA188AC88700146655 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405E9188AC88700146655 /* Environment.m */; };
-		494405ED188AC89600146655 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405EC188AC89600146655 /* Player.m */; };
-		494405F0188AC8A100146655 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405EF188AC8A100146655 /* Enemy.m */; };
-		494405F3188AC8E100146655 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405F2188AC8E100146655 /* Entity.m */; };
-		494405FC188ACA9C00146655 /* EMouseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405FB188ACA9C00146655 /* EMouseEvent.m */; };
-		49519FAF18777F280038D7D0 /* EInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 49519FAE18777F280038D7D0 /* EInput.m */; };
-		49519FB2187780B40038D7D0 /* EObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49519FB1187780B40038D7D0 /* EObjectController.m */; };
-		49519FB6187782F90038D7D0 /* EFlashingTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49519FB5187782F90038D7D0 /* EFlashingTriangle.m */; };
-		49519FB9187783070038D7D0 /* EFallingTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49519FB8187783070038D7D0 /* EFallingTriangle.m */; };
-		4967241518761F6B00A4B67A /* ETicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241418761F6B00A4B67A /* ETicker.m */; };
-		496724181876202700A4B67A /* EGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 496724171876202700A4B67A /* EGame.m */; };
-		4967241B187634AB00A4B67A /* ERandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241A187634AB00A4B67A /* ERandom.m */; };
-		4967241E187638C700A4B67A /* EGeneralMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967241D187638C700A4B67A /* EGeneralMath.m */; };
-		4967246B1877460700A4B67A /* EEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967246A1877460700A4B67A /* EEventQueue.m */; };
-		4967246F187768A200A4B67A /* EEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967246E187768A200A4B67A /* EEventObject.m */; };
+		49101C83188CAEFF00E628B4 /* OpenGLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49101C82188CAEFF00E628B4 /* OpenGLManager.m */; };
+		49101C8D188CB64600E628B4 /* WindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49101C8C188CB64600E628B4 /* WindowManager.m */; };
+		49101C8E188CCC2900E628B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C75B1873B057001473AA /* main.m */; };
+		49101C96188CD26700E628B4 /* ESize.m in Sources */ = {isa = PBXBuildFile; fileRef = 49101C93188CCFC100E628B4 /* ESize.m */; };
+		49101C99188CD3FD00E628B4 /* EOrtho.m in Sources */ = {isa = PBXBuildFile; fileRef = 49101C98188CD3FD00E628B4 /* EOrtho.m */; };
+		49101C9C188CD4D900E628B4 /* EColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49101C9B188CD4D900E628B4 /* EColor.m */; };
+		49531C7B188CDEC5006E48B5 /* Transmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C7A188CDEC5006E48B5 /* Transmitter.m */; };
+		49531C7F188CDEE7006E48B5 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C7E188CDEE7006E48B5 /* Manager.m */; };
+		49531C85188CE285006E48B5 /* InputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C84188CE285006E48B5 /* InputManager.m */; };
+		49531C89188CE798006E48B5 /* ObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C88188CE798006E48B5 /* ObjectManager.m */; };
+		49531C8C188CE7CB006E48B5 /* EObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C8B188CE7CB006E48B5 /* EObject.m */; };
+		49531C8F188CE8CD006E48B5 /* EPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C8E188CE8CD006E48B5 /* EPoint.m */; };
+		49531C92188CE921006E48B5 /* EShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 49531C91188CE921006E48B5 /* EShape.m */; };
 		4989C7501873B057001473AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C74F1873B057001473AA /* Cocoa.framework */; };
-		4989C75A1873B057001473AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7581873B057001473AA /* InfoPlist.strings */; };
-		4989C75C1873B057001473AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C75B1873B057001473AA /* main.m */; };
 		4989C7601873B057001473AA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4989C75E1873B057001473AA /* Credits.rtf */; };
 		4989C7631873B057001473AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7621873B057001473AA /* AppDelegate.m */; };
 		4989C7681873B057001473AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4989C7671873B057001473AA /* Images.xcassets */; };
@@ -38,15 +30,8 @@
 		4989C77A1873B057001473AA /* FunWithOpenGLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7791873B057001473AA /* FunWithOpenGLTests.m */; };
 		4989C7851873B0BD001473AA /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C7841873B0BD001473AA /* MainView.m */; };
 		4989C7871873B320001473AA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4989C7861873B320001473AA /* OpenGL.framework */; };
-		4989C78B1874E2BF001473AA /* EVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989C78A1874E2BF001473AA /* EVector.m */; };
-		498CE8831877B4D100B24383 /* ECollision.m in Sources */ = {isa = PBXBuildFile; fileRef = 498CE8821877B4D100B24383 /* ECollision.m */; };
-		4994440A18777C1000D91793 /* ECursorShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 4994440918777C1000D91793 /* ECursorShape.m */; };
-		49B61C29187528FD00B966DB /* ETriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C28187528FD00B966DB /* ETriangle.m */; };
-		49B61C2F18752A3300B966DB /* EPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C2E18752A3300B966DB /* EPoint.m */; };
-		49B61C3218752C0C00B966DB /* EGeometric.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C3118752C0C00B966DB /* EGeometric.m */; };
-		49B61C3518752C3500B966DB /* EColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C3418752C3500B966DB /* EColor.m */; };
-		49B61C38187533C300B966DB /* ETrig.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B61C37187533C300B966DB /* ETrig.m */; };
-		49DCC41A18778A4400C19123 /* EForce.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCC41918778A4400C19123 /* EForce.m */; };
+		49B6C0B0188CEDFB00EAE8CE /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6C0AF188CEDFB00EAE8CE /* GameManager.m */; };
+		49B6C0B3188CEF1100EAE8CE /* ETicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6C0B2188CEF1100EAE8CE /* ETicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +47,18 @@
 /* Begin PBXFileReference section */
 		49101C7E188CA92600E628B4 /* Level1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1.h; sourceTree = "<group>"; };
 		49101C7F188CA92600E628B4 /* Level1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level1.m; sourceTree = "<group>"; };
+		49101C81188CAEFF00E628B4 /* OpenGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLManager.h; path = Managers/OpenGL/OpenGLManager.h; sourceTree = "<group>"; };
+		49101C82188CAEFF00E628B4 /* OpenGLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLManager.m; path = Managers/OpenGL/OpenGLManager.m; sourceTree = "<group>"; };
+		49101C89188CB15800E628B4 /* ManagerHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ManagerHeader.pch; path = Managers/ManagerHeader.pch; sourceTree = "<group>"; };
+		49101C8B188CB64600E628B4 /* WindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowManager.h; path = Managers/Window/WindowManager.h; sourceTree = "<group>"; };
+		49101C8C188CB64600E628B4 /* WindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowManager.m; path = Managers/Window/WindowManager.m; sourceTree = "<group>"; };
+		49101C92188CCFC100E628B4 /* ESize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESize.h; path = "Engine/Data Structures/ESize.h"; sourceTree = "<group>"; };
+		49101C93188CCFC100E628B4 /* ESize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESize.m; path = "Engine/Data Structures/ESize.m"; sourceTree = "<group>"; };
+		49101C95188CD00100E628B4 /* EngineHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EngineHeader.pch; path = Engine/EngineHeader.pch; sourceTree = "<group>"; };
+		49101C97188CD3FD00E628B4 /* EOrtho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EOrtho.h; path = "Engine/Data Structures/EOrtho.h"; sourceTree = "<group>"; };
+		49101C98188CD3FD00E628B4 /* EOrtho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EOrtho.m; path = "Engine/Data Structures/EOrtho.m"; sourceTree = "<group>"; };
+		49101C9A188CD4D900E628B4 /* EColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EColor.h; path = "Engine/Data Structures/EColor.h"; sourceTree = "<group>"; };
+		49101C9B188CD4D900E628B4 /* EColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EColor.m; path = "Engine/Data Structures/EColor.m"; sourceTree = "<group>"; };
 		492408341876176F006B6A1A /* EGLControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGLControl.h; sourceTree = "<group>"; };
 		492408351876176F006B6A1A /* EGLControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGLControl.m; sourceTree = "<group>"; };
 		4924083718761B95006B6A1A /* EPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPolygon.h; sourceTree = "<group>"; };
@@ -86,6 +83,22 @@
 		49519FB5187782F90038D7D0 /* EFlashingTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFlashingTriangle.m; sourceTree = "<group>"; };
 		49519FB7187783070038D7D0 /* EFallingTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFallingTriangle.h; sourceTree = "<group>"; };
 		49519FB8187783070038D7D0 /* EFallingTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFallingTriangle.m; sourceTree = "<group>"; };
+		49531C77188CDD7B006E48B5 /* TransmitterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TransmitterProtocol.h; path = Engine/Protocols/TransmitterProtocol.h; sourceTree = "<group>"; };
+		49531C78188CDD8A006E48B5 /* ReceiverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReceiverProtocol.h; path = Engine/Protocols/ReceiverProtocol.h; sourceTree = "<group>"; };
+		49531C79188CDEC5006E48B5 /* Transmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transmitter.h; path = Managers/ObjectTypes/Transmitter.h; sourceTree = "<group>"; };
+		49531C7A188CDEC5006E48B5 /* Transmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transmitter.m; path = Managers/ObjectTypes/Transmitter.m; sourceTree = "<group>"; };
+		49531C7D188CDEE7006E48B5 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Manager.h; path = Managers/ObjectTypes/Manager.h; sourceTree = "<group>"; };
+		49531C7E188CDEE7006E48B5 /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Manager.m; path = Managers/ObjectTypes/Manager.m; sourceTree = "<group>"; };
+		49531C83188CE285006E48B5 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputManager.h; path = Managers/InputManager/InputManager.h; sourceTree = "<group>"; };
+		49531C84188CE285006E48B5 /* InputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputManager.m; path = Managers/InputManager/InputManager.m; sourceTree = "<group>"; };
+		49531C87188CE798006E48B5 /* ObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectManager.h; path = Managers/Object/ObjectManager.h; sourceTree = "<group>"; };
+		49531C88188CE798006E48B5 /* ObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectManager.m; path = Managers/Object/ObjectManager.m; sourceTree = "<group>"; };
+		49531C8A188CE7CB006E48B5 /* EObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EObject.h; path = Managers/Object/EObject.h; sourceTree = "<group>"; };
+		49531C8B188CE7CB006E48B5 /* EObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EObject.m; path = Managers/Object/EObject.m; sourceTree = "<group>"; };
+		49531C8D188CE8CD006E48B5 /* EPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EPoint.h; path = "Engine/Data Structures/EPoint.h"; sourceTree = "<group>"; };
+		49531C8E188CE8CD006E48B5 /* EPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EPoint.m; path = "Engine/Data Structures/EPoint.m"; sourceTree = "<group>"; };
+		49531C90188CE921006E48B5 /* EShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EShape.h; path = "Engine/Data Structures/EShape.h"; sourceTree = "<group>"; };
+		49531C91188CE921006E48B5 /* EShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EShape.m; path = "Engine/Data Structures/EShape.m"; sourceTree = "<group>"; };
 		4967241318761F6B00A4B67A /* ETicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETicker.h; sourceTree = "<group>"; };
 		4967241418761F6B00A4B67A /* ETicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETicker.m; sourceTree = "<group>"; };
 		496724161876202700A4B67A /* EGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGame.h; sourceTree = "<group>"; };
@@ -104,7 +117,6 @@
 		4989C7531873B057001473AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4989C7541873B057001473AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4989C7571873B057001473AA /* FunWithOpenGL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunWithOpenGL-Info.plist"; sourceTree = "<group>"; };
-		4989C7591873B057001473AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4989C75B1873B057001473AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4989C75D1873B057001473AA /* FunWithOpenGL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunWithOpenGL-Prefix.pch"; sourceTree = "<group>"; };
 		4989C75F1873B057001473AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -136,6 +148,10 @@
 		49B61C3418752C3500B966DB /* EColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColor.m; sourceTree = "<group>"; };
 		49B61C36187533C300B966DB /* ETrig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETrig.h; sourceTree = "<group>"; };
 		49B61C37187533C300B966DB /* ETrig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETrig.m; sourceTree = "<group>"; };
+		49B6C0AE188CEDFB00EAE8CE /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Managers/Game/GameManager.h; sourceTree = "<group>"; };
+		49B6C0AF188CEDFB00EAE8CE /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameManager.m; path = Managers/Game/GameManager.m; sourceTree = "<group>"; };
+		49B6C0B1188CEF1100EAE8CE /* ETicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ETicker.h; path = Managers/Game/ETicker.h; sourceTree = "<group>"; };
+		49B6C0B2188CEF1100EAE8CE /* ETicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETicker.m; path = Managers/Game/ETicker.m; sourceTree = "<group>"; };
 		49DCC41818778A4400C19123 /* EForce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EForce.h; sourceTree = "<group>"; };
 		49DCC41918778A4400C19123 /* EForce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EForce.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +178,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49101C84188CAF0800E628B4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				49B6C0AD188CEDE700EAE8CE /* Game */,
+				49531C86188CE782006E48B5 /* Object */,
+				49531C72188CDD03006E48B5 /* Input */,
+				49101C89188CB15800E628B4 /* ManagerHeader.pch */,
+				49531C7C188CDEC9006E48B5 /* ObjectTypes */,
+				49101C85188CAF0F00E628B4 /* OpenGL */,
+				49101C8A188CB62D00E628B4 /* Window */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		49101C85188CAF0F00E628B4 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				49101C81188CAEFF00E628B4 /* OpenGLManager.h */,
+				49101C82188CAEFF00E628B4 /* OpenGLManager.m */,
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		49101C8A188CB62D00E628B4 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				49101C8B188CB64600E628B4 /* WindowManager.h */,
+				49101C8C188CB64600E628B4 /* WindowManager.m */,
+			);
+			name = Window;
+			sourceTree = "<group>";
+		};
+		49101C8F188CCF4600E628B4 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				494405E3188AC83C00146655 /* World */,
+				49519FB3187782E50038D7D0 /* Object Testing */,
+				4967246C1877688F00A4B67A /* Events */,
+				49672468187745EF00A4B67A /* General */,
+				4924083B18761D80006B6A1A /* Window Control */,
+				49240833187616D6006B6A1A /* OpenGL Control */,
+				49B61C26187528E400B966DB /* Geometry */,
+				4989C78E1874EEDD001473AA /* Categories */,
+				4989C78C1874E73B001473AA /* Math */,
+				4989C78D1874E757001473AA /* Engine.h */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
+		49101C91188CCF9B00E628B4 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				49101C92188CCFC100E628B4 /* ESize.h */,
+				49101C93188CCFC100E628B4 /* ESize.m */,
+				49101C97188CD3FD00E628B4 /* EOrtho.h */,
+				49101C98188CD3FD00E628B4 /* EOrtho.m */,
+				49101C9A188CD4D900E628B4 /* EColor.h */,
+				49101C9B188CD4D900E628B4 /* EColor.m */,
+				49531C8D188CE8CD006E48B5 /* EPoint.h */,
+				49531C8E188CE8CD006E48B5 /* EPoint.m */,
+				49531C90188CE921006E48B5 /* EShape.h */,
+				49531C91188CE921006E48B5 /* EShape.m */,
+			);
+			name = "Data Structures";
+			sourceTree = "<group>";
+		};
 		49240833187616D6006B6A1A /* OpenGL Control */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +330,46 @@
 			name = "Object Testing";
 			sourceTree = "<group>";
 		};
+		49531C72188CDD03006E48B5 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				49531C83188CE285006E48B5 /* InputManager.h */,
+				49531C84188CE285006E48B5 /* InputManager.m */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		49531C76188CDD58006E48B5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				49531C77188CDD7B006E48B5 /* TransmitterProtocol.h */,
+				49531C78188CDD8A006E48B5 /* ReceiverProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		49531C7C188CDEC9006E48B5 /* ObjectTypes */ = {
+			isa = PBXGroup;
+			children = (
+				49531C7D188CDEE7006E48B5 /* Manager.h */,
+				49531C7E188CDEE7006E48B5 /* Manager.m */,
+				49531C79188CDEC5006E48B5 /* Transmitter.h */,
+				49531C7A188CDEC5006E48B5 /* Transmitter.m */,
+			);
+			name = ObjectTypes;
+			sourceTree = "<group>";
+		};
+		49531C86188CE782006E48B5 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				49531C87188CE798006E48B5 /* ObjectManager.h */,
+				49531C88188CE798006E48B5 /* ObjectManager.m */,
+				49531C8A188CE7CB006E48B5 /* EObject.h */,
+				49531C8B188CE7CB006E48B5 /* EObject.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
 		49672468187745EF00A4B67A /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,14 +435,13 @@
 		4989C7551873B057001473AA /* FunWithOpenGL */ = {
 			isa = PBXGroup;
 			children = (
-				4989C7881874E2AE001473AA /* Engine */,
-				49519FB3187782E50038D7D0 /* Object Testing */,
 				4989C7611873B057001473AA /* AppDelegate.h */,
 				4989C7621873B057001473AA /* AppDelegate.m */,
+				4989C7881874E2AE001473AA /* Engine */,
 				4989C7831873B0BD001473AA /* MainView.h */,
 				4989C7841873B0BD001473AA /* MainView.m */,
-				494405E3188AC83C00146655 /* World */,
-				4989C7671873B057001473AA /* Images.xcassets */,
+				49101C84188CAF0800E628B4 /* Managers */,
+				49101C8F188CCF4600E628B4 /* Old */,
 				4989C7561873B057001473AA /* Supporting Files */,
 			);
 			path = FunWithOpenGL;
@@ -329,8 +450,8 @@
 		4989C7561873B057001473AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4989C7671873B057001473AA /* Images.xcassets */,
 				4989C7571873B057001473AA /* FunWithOpenGL-Info.plist */,
-				4989C7581873B057001473AA /* InfoPlist.strings */,
 				4989C75B1873B057001473AA /* main.m */,
 				4989C75D1873B057001473AA /* FunWithOpenGL-Prefix.pch */,
 				4989C75E1873B057001473AA /* Credits.rtf */,
@@ -359,14 +480,9 @@
 		4989C7881874E2AE001473AA /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				4967246C1877688F00A4B67A /* Events */,
-				49672468187745EF00A4B67A /* General */,
-				4924083B18761D80006B6A1A /* Window Control */,
-				49240833187616D6006B6A1A /* OpenGL Control */,
-				49B61C26187528E400B966DB /* Geometry */,
-				4989C78E1874EEDD001473AA /* Categories */,
-				4989C78C1874E73B001473AA /* Math */,
-				4989C78D1874E757001473AA /* Engine.h */,
+				49531C76188CDD58006E48B5 /* Protocols */,
+				49101C91188CCF9B00E628B4 /* Data Structures */,
+				49101C95188CD00100E628B4 /* EngineHeader.pch */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -412,6 +528,17 @@
 				4994440918777C1000D91793 /* ECursorShape.m */,
 			);
 			name = Geometry;
+			sourceTree = "<group>";
+		};
+		49B6C0AD188CEDE700EAE8CE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				49B6C0AE188CEDFB00EAE8CE /* GameManager.h */,
+				49B6C0AF188CEDFB00EAE8CE /* GameManager.m */,
+				49B6C0B1188CEF1100EAE8CE /* ETicker.h */,
+				49B6C0B2188CEF1100EAE8CE /* ETicker.m */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,7 +618,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4989C75A1873B057001473AA /* InfoPlist.strings in Resources */,
 				4989C7681873B057001473AA /* Images.xcassets in Resources */,
 				4989C7601873B057001473AA /* Credits.rtf in Resources */,
 			);
@@ -512,37 +638,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B61C29187528FD00B966DB /* ETriangle.m in Sources */,
-				49B61C3218752C0C00B966DB /* EGeometric.m in Sources */,
+				49101C96188CD26700E628B4 /* ESize.m in Sources */,
+				49531C92188CE921006E48B5 /* EShape.m in Sources */,
+				49101C8E188CCC2900E628B4 /* main.m in Sources */,
+				49101C9C188CD4D900E628B4 /* EColor.m in Sources */,
+				49531C8C188CE7CB006E48B5 /* EObject.m in Sources */,
 				4989C7851873B0BD001473AA /* MainView.m in Sources */,
-				49B61C38187533C300B966DB /* ETrig.m in Sources */,
-				494405F0188AC8A100146655 /* Enemy.m in Sources */,
-				492408361876176F006B6A1A /* EGLControl.m in Sources */,
-				49519FB9187783070038D7D0 /* EFallingTriangle.m in Sources */,
-				4967246F187768A200A4B67A /* EEventObject.m in Sources */,
-				496724181876202700A4B67A /* EGame.m in Sources */,
-				4967241E187638C700A4B67A /* EGeneralMath.m in Sources */,
-				49519FB6187782F90038D7D0 /* EFlashingTriangle.m in Sources */,
-				49B61C2F18752A3300B966DB /* EPoint.m in Sources */,
-				494405FC188ACA9C00146655 /* EMouseEvent.m in Sources */,
-				498CE8831877B4D100B24383 /* ECollision.m in Sources */,
-				49519FAF18777F280038D7D0 /* EInput.m in Sources */,
-				49519FB2187780B40038D7D0 /* EObjectController.m in Sources */,
+				49531C89188CE798006E48B5 /* ObjectManager.m in Sources */,
 				4989C7631873B057001473AA /* AppDelegate.m in Sources */,
-				4967246B1877460700A4B67A /* EEventQueue.m in Sources */,
-				494405ED188AC89600146655 /* Player.m in Sources */,
-				4967241518761F6B00A4B67A /* ETicker.m in Sources */,
-				4924083E18761D8F006B6A1A /* ECursor.m in Sources */,
-				4967241B187634AB00A4B67A /* ERandom.m in Sources */,
-				4924083918761B95006B6A1A /* EPolygon.m in Sources */,
-				494405F3188AC8E100146655 /* Entity.m in Sources */,
-				49101C80188CA92600E628B4 /* Level1.m in Sources */,
-				4989C78B1874E2BF001473AA /* EVector.m in Sources */,
-				4994440A18777C1000D91793 /* ECursorShape.m in Sources */,
-				4989C75C1873B057001473AA /* main.m in Sources */,
-				49DCC41A18778A4400C19123 /* EForce.m in Sources */,
-				49B61C3518752C3500B966DB /* EColor.m in Sources */,
-				494405EA188AC88700146655 /* Environment.m in Sources */,
+				49101C99188CD3FD00E628B4 /* EOrtho.m in Sources */,
+				49531C8F188CE8CD006E48B5 /* EPoint.m in Sources */,
+				49101C83188CAEFF00E628B4 /* OpenGLManager.m in Sources */,
+				49531C7B188CDEC5006E48B5 /* Transmitter.m in Sources */,
+				49531C85188CE285006E48B5 /* InputManager.m in Sources */,
+				49B6C0B0188CEDFB00EAE8CE /* GameManager.m in Sources */,
+				49B6C0B3188CEF1100EAE8CE /* ETicker.m in Sources */,
+				49531C7F188CDEE7006E48B5 /* Manager.m in Sources */,
+				49101C8D188CB64600E628B4 /* WindowManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,14 +677,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4989C7581873B057001473AA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4989C7591873B057001473AA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		4989C75E1873B057001473AA /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (

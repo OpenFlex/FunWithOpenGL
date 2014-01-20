@@ -1,0 +1,23 @@
+//
+//  ManagerHeader.pch
+//  FunWithOpenGL
+//
+//  Created by Josh Grant on 1/19/14.
+//  Copyright (c) 2014 Deloitte. All rights reserved.
+//
+
+#ifndef FunWithOpenGL_ManagerHeader_pch
+#define FunWithOpenGL_ManagerHeader_pch
+
+#import "Manager.h"
+#import "OpenGLManager.h"
+#import "WindowManager.h"
+#import "InputManager.h"
+
+#import "ETicker.h"
+#import "GameManager.h"
+
+#import "EObject.h"
+#import "ObjectManager.h"
+
+#endif
