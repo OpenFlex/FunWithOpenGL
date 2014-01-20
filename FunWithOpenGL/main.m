@@ -7,12 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "FWOGLAppDelegate.h"
+#import "AppDelegate.h"
 
 int main(int argc, const char * argv[])
 {
     [NSApplication sharedApplication];
-    FWOGLAppDelegate *appDelegate = [[FWOGLAppDelegate alloc] init];
+    AppDelegate *appDelegate = [[AppDelegate alloc] init];
     [NSApp setDelegate:appDelegate];
     [NSApp run];
     

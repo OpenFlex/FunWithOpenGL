@@ -7,11 +7,28 @@
 //
 
 #import "EGeometric.h"
+#import "ECollision.h"
 #import <OpenGL/gl.h>
 
 @implementation EGeometric
 
+#pragma mark - Initialization
+
+- (EGeometric *)initWithOrigin:(EPoint *)origin
+{
+    if (self = [super init]) {
+        self.origin = origin;
+    }
+    return self;
+}
+
 #pragma mark - Public methods
+
+- (void)update
+{
+//    [self applyForces];
+    [self draw];
+}
 
 - (void)draw
 {
@@ -32,6 +49,33 @@
     for (EPoint *point in self.points) {
         [point addVector:vector];
     }
+}
+
+- (void)applyForces
+{
+//    NSTimeInterval delta = [[EGame sharedInstance].ticker logicDelta];
+//    
+//    for (int i = 0; i < self.forces.count; i++) {
+//        EForce *force = [self.forces objectAtIndex:i];
+//        
+//        EVector *resultantAcceleration = [force.direction multiplyVectorWithConstant:force.magnitude];
+//        [resultantAcceleration divideVectorByConstant:self.mass];
+//        
+//        [self.acceleration addVector:resultantAcceleration];
+////        [self.acceleration multiplyByConstant:delta * 2000];
+//        
+//        [self.velocity addVector:[EVector vectorWithPoint:self.acceleration]];
+//        
+//        EVector *deltaVector = [EVector vectorWithPoint:self.velocity];
+////        deltaVector = [deltaVector multiplyVectorWithConstant:delta * 2000];
+//        [self.origin addVector:deltaVector];
+//        
+//        if (force.temporaryForce) {
+//            [self.forces removeObject:force];
+//            [self.acceleration subtractVector:resultantAcceleration];
+//            i--;
+//        }
+//    }
 }
 
 #pragma mark - Private methods
@@ -62,11 +106,32 @@
 
 #pragma mark - Overridden properties
 
+- (EPoint *)acceleration
+{
+    return (!_acceleration) ?
+    _acceleration = [EPoint zeroPoint] :
+    _acceleration;
+}
+
+- (EPoint *)velocity
+{
+    return (!_velocity) ?
+    _velocity = [EPoint zeroPoint] :
+    _velocity;
+}
+
 - (EPoint *)origin
 {
     return (!_origin) ?
     _origin = [EPoint zeroPoint] :
     _origin;
+}
+
+- (NSMutableArray *)forces
+{
+    return (!_forces) ?
+    _forces = [NSMutableArray new] :
+    _forces;
 }
 
 @end

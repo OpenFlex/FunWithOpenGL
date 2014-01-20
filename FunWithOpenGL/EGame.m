@@ -7,12 +7,12 @@
 //
 
 #import "EGame.h"
-#import "FWOGLView.h"
-#import "FWOGLAppDelegate.h"
+#import "MainView.h"
+#import "AppDelegate.h"
 
 @interface EGame ()
 
-@property (nonatomic, strong) FWOGLView *view;
+@property (nonatomic, strong) MainView *view;
 
 @end
 
@@ -29,7 +29,7 @@ static dispatch_source_t timerSource;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EGame new];
         sharedInstance.gameState = RUNNING;
-        sharedInstance.desiredFrameRate = 60.0;
+        sharedInstance.desiredFrameRate = 800;
     });
     return sharedInstance;
 }
@@ -39,9 +39,8 @@ static dispatch_source_t timerSource;
 - (void)gameLoop
 {
     if (self.gameState == RUNNING) {
-        if (self.ticker.logicDelta > 1.0 / self.desiredFrameRate) {
+        if (self.ticker.logicDelta > (1.0 / self.desiredFrameRate)) {
             [[EEventQueue sharedInstance] update];
-            [self.ticker logicWasCompleted];
         }
     } else if (self.gameState == PAUSED) {
         [self.ticker logicWasCompleted];
@@ -61,13 +60,12 @@ static dispatch_source_t timerSource;
 
 - (void)initializeTimer
 {
-    NSInteger nanosecondFractional = 1000000000;
-    timerSource = [self createDispatchTimerWithTimeInterval:1.0/self.desiredFrameRate * nanosecondFractional leeway: 0.5/self.desiredFrameRate * nanosecondFractional dispatchQueue:dispatch_get_main_queue() executionBlock:^{
-        [self gameLoop];
-    }];
-    
     [self.ticker drawingWasCompleted];
     [self.ticker logicWasCompleted];
+    
+    timerSource = [self createDispatchTimerWithTimeInterval:0 leeway:0 dispatchQueue:dispatch_get_main_queue() executionBlock:^{
+        [self gameLoop];
+    }];
 }
 
 - (dispatch_source_t)createDispatchTimerWithTimeInterval:(uint64_t)interval leeway:(uint64_t)leeway dispatchQueue:(dispatch_queue_t)queue executionBlock:(dispatch_block_t)block
@@ -85,10 +83,7 @@ static dispatch_source_t timerSource;
 
 - (ETicker *)ticker
 {
-    return (!_ticker) ?
-    _ticker = [ETicker new] :
-    _ticker;
+    return (!_ticker) ? _ticker = [ETicker new] : _ticker;
 }
-
 
 @end

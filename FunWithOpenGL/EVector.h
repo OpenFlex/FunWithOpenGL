@@ -8,23 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
+@class EPoint;
+
 @interface EVector : NSObject
 
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat z;
 
-+ (EVector *)vectorWithXComponent:(CGFloat)xComponent yComponent:(CGFloat)yComponent;
-+ (EVector *)vectorWithXComponent:(CGFloat)xComponent yComponent:(CGFloat)yComponent zComponent:(CGFloat)zComponent;
++ (EVector *)vectorWithX:(CGFloat)xComponent y:(CGFloat)yComponent;
++ (EVector *)vectorWithX:(CGFloat)xComponent y:(CGFloat)yComponent z:(CGFloat)zComponent;
 
-+ (EVector *)vectorWithPoint:(NSPoint)point;
++ (EVector *)vectorWithPoint:(EPoint *)point;
++ (EVector *)vectorWithNSPoint:(NSPoint)point;
 
 - (EVector *)addVector:(EVector *)vector;
 - (EVector *)subtractVector:(EVector *)vector;
 - (EVector *)multiplyVector:(EVector *)vector;
+- (EVector *)multiplyVectorWithConstant:(CGFloat)constant;
+- (EVector *)divideVector:(EVector *)vector;
+- (EVector *)divideVectorByConstant:(CGFloat)constant;
 
 - (void)changeVectorValuesWithPoint:(NSPoint)point;
-- (void)changeVectorValuesWithXComponent:(CGFloat)xComponent yComponent:(CGFloat)yComponent zComponent:(CGFloat)zComponent;
+- (void)changeVectorValuesWithX:(CGFloat)xComponent y:(CGFloat)yComponent z:(CGFloat)zComponent;
 
 - (EVector *)vectorCopy;
 

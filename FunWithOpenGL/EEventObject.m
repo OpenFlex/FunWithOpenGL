@@ -14,6 +14,7 @@
 {
     EEventObject *eventObject = [EEventObject new];
     eventObject.eventBlock = block;
+    eventObject.eventType = EVENT_OBJECT;
     return eventObject;
 }
 

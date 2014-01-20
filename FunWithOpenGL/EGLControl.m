@@ -37,7 +37,8 @@
     GLsizei backingPixelWidth  = (GLsizei)(backingBounds.size.width),
     backingPixelHeight = (GLsizei)(backingBounds.size.height);
     glViewport(0, 0, backingPixelWidth, backingPixelHeight);
-    [self updateOrthographicProjectionWithDefault];
+//    glViewport(0, 0, NSWidth(self.operatingView.bounds), NSHeight(self.operatingView.bounds));
+//    [self updateOrthographicProjectionWithDefault];
 }
 
 - (void)clearBackground

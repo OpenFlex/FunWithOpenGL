@@ -46,9 +46,38 @@
     self.y += vector.y;
 }
 
+- (void)subtractVector:(EVector *)vector
+{
+    self.x -= vector.x;
+    self.y -= vector.y;
+}
+
+- (EPoint *)subtractPoint:(EPoint *)point
+{
+    return [EPoint pointWithXComponent:self.x - point.x yComponent:self.y - point.y];
+}
+
+- (void)multiplyByConstant:(CGFloat)constant
+{
+    self.x *= constant;
+    self.y *= constant;
+}
+
+- (EPoint *)divideByConstant:(CGFloat)constant
+{
+    return [EPoint pointWithXComponent:self.x / constant yComponent:self.y / constant];
+}
+
 - (BOOL)pointInRect:(NSRect)rect
 {
     return !(self.x < rect.origin.x || self.y < rect.origin.y || self.x > rect.origin.x + rect.size.width || self.y > rect.origin.y + rect.size.height);
+}
+
+- (CGFloat)distanceFromPoint:(EPoint *)point
+{
+    float dx = self.x - point.x;
+    float dy = self.y - point.y;
+    return sqrtf(dx * dx + dy * dy);
 }
 
 #pragma mark - Overridden methods

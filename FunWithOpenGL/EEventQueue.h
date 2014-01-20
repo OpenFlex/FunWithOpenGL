@@ -20,7 +20,7 @@ typedef void (^CompletionHandler)();
 
 @interface EEventQueue : NSMutableSet
 
-@property (strong, readonly) NSMutableSet *eventQueue;
+@property (strong, readonly) NSMutableArray *eventQueue;
 @property (strong, readonly) NSMutableSet *delegates;
 
 + (EEventQueue *)sharedInstance;

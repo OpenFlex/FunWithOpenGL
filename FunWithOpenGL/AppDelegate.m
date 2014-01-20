@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Deloitte. All rights reserved.
 //
 
-#import "FWOGLAppDelegate.h"
-#import "FWOGLView.h"
+#import "AppDelegate.h"
+#import "MainView.h"
 
 static const NSRect windowSize = {{0, 0}, {480, 360}};
 
-@implementation FWOGLAppDelegate
+@implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -26,12 +26,11 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
 - (void)initializeWindow
 {
     self.window = [[NSWindow alloc] initWithContentRect:windowSize
-                                              styleMask:(NSTitledWindowMask | NSResizableWindowMask)
+                                              styleMask:(NSTitledWindowMask | NSResizableWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask)
                                                 backing:NSBackingStoreBuffered defer:YES];
     [self.window setTitle:@"FunWithOpenGL"];
     [self.window setShowsResizeIndicator:YES];
     [self.window setAcceptsMouseMovedEvents:YES];
-    [self.window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
     [self.window setFrameOrigin:NSMakePoint((NSWidth([NSScreen mainScreen].frame) - NSWidth(windowSize)) / 2,
                                             (NSHeight([NSScreen mainScreen].frame) - NSHeight(windowSize)) / 2)];
 }
@@ -40,7 +39,7 @@ static const NSRect windowSize = {{0, 0}, {480, 360}};
 {
     NSOpenGLPixelFormatAttribute attributes[] = { NSOpenGLPFADoubleBuffer, 0 };
     NSOpenGLPixelFormat *pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attributes];
-    self.view = [[FWOGLView alloc] initWithFrame:windowSize pixelFormat:pixelFormat];
+    self.view = [[MainView alloc] initWithFrame:windowSize pixelFormat:pixelFormat];
     [self.view setWantsBestResolutionOpenGLSurface:YES];
     [self.view setWantsLayer:YES];
 }

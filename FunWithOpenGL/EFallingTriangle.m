@@ -15,8 +15,13 @@
     if (self = [super init]) {
         __unsafe_unretained typeof(self) weakSelf = self;
         self.animationBlock = ^{
-            CGFloat verticalDisplacement = -20 * [[EGame sharedInstance].ticker logicDelta];
-            [weakSelf translateWithVector:[EVector vectorWithXComponent:0.0 yComponent:verticalDisplacement]];
+            if (weakSelf.origin.x >= 480 || weakSelf.origin.x <= 0) {
+                weakSelf.velocity.x *= -1;
+            }
+            
+            if (weakSelf.origin.y >= 360 || weakSelf.origin.y <= 0) {
+                weakSelf.velocity.y *= -1;
+            }
         };
     }
     return self;

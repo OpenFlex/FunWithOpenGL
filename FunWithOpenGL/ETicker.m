@@ -30,10 +30,12 @@
 
 - (NSTimeInterval)logicDelta
 {
+    static NSTimeInterval interval;
     static NSTimeInterval delta;
     
-    delta = [[NSDate date] timeIntervalSince1970];
-    return delta - self.timeSinceLastLogic;
+    interval = [[NSDate date] timeIntervalSince1970];
+    delta = interval - self.timeSinceLastLogic;
+    return (delta < 10000) ? delta : 0;
 }
 
 @end

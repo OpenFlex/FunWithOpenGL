@@ -20,6 +20,17 @@
 + (EPoint *)zeroPoint;
 
 - (void)addVector:(EVector *)vector;
+- (void)subtractVector:(EVector *)vector;
+
+- (EPoint *)subtractPoint:(EPoint *)point;
+
+- (void)multiplyByConstant:(CGFloat)constant;
+
+- (EPoint *)divideByConstant:(CGFloat)constant;
+
+
 - (BOOL)pointInRect:(NSRect)rect;
+
+- (CGFloat)distanceFromPoint:(EPoint *)point;
 
 @end

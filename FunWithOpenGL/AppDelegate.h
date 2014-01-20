@@ -7,12 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "FWOGLView.h"
+#import "MainView.h"
 #import "EEventQueue.h"
 
-@interface FWOGLAppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) NSWindow *window;
-@property (strong) FWOGLView *view;
+@property (strong) MainView *view;
 
 @end

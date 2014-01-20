@@ -11,12 +11,15 @@
 
 @interface EEventQueue ()
 
-@property (readwrite) NSMutableSet *eventQueue;
-@property (readwrite) NSMutableSet *delegates;
+@property (atomic, strong) NSMutableArray *eventQueue;
+@property (atomic, strong) NSMutableSet *delegates;
 
 @end
 
 @implementation EEventQueue
+
+@synthesize eventQueue = _eventQueue;
+@synthesize delegates = _delegates;
 
 #pragma mark - Singleton
 
@@ -26,7 +29,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EEventQueue new];
-        sharedInstance.eventQueue = [NSMutableSet new];
+        sharedInstance.eventQueue = [NSMutableArray new];
         sharedInstance.delegates = [NSMutableSet new];
     });
     return sharedInstance;
@@ -70,14 +73,15 @@
 
 - (void)update
 {
-    if ([self.eventQueue count] > 0) {
-        for (int i = 0; i < self.eventQueue.count; i++) {
-            EEventObject *object = [self.eventQueue anyObject];
-            [self updateDelegatesWithEventObject:object];
-            [self removeObjectFromEventQueue:object];
-            i--;
-        }
-    }
+    if ([self.eventQueue count] <= 0) return;
+    
+    [self.eventQueue enumerateObjectsWithOptions:(NSEnumerationReverse) usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self updateDelegatesWithEventObject:obj];
+    }];
+    
+    [[EGame sharedInstance].ticker logicWasCompleted];
+    
+    self.eventQueue = [NSMutableArray new];
 }
 
 @end

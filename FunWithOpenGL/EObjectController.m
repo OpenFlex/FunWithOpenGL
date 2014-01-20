@@ -25,8 +25,8 @@
 
 - (void)displayObjects
 {
-    [self._flashingTriangle draw];
-    [self._fallingTriangle draw];
+    [self._flashingTriangle update];
+    [self._fallingTriangle update];
 }
 
 - (void)updateEventQueue
@@ -34,8 +34,12 @@
     __unsafe_unretained typeof(self._flashingTriangle) flashingTriangle = self._flashingTriangle;
     __unsafe_unretained typeof(self._fallingTriangle) fallingTriangle = self._fallingTriangle;
     [[EEventQueue sharedInstance] addObjectToEventQueue:[EEventObject initWithEventBlock:^{
-        flashingTriangle.animationBlock();
-        fallingTriangle.animationBlock();
+        if (flashingTriangle.animationBlock) {
+            flashingTriangle.animationBlock();
+        }
+        if (fallingTriangle.animationBlock) {
+            fallingTriangle.animationBlock();
+        }
     }]];
 }
 
@@ -55,11 +59,18 @@
 - (EFallingTriangle *)_fallingTriangle
 {
     if (!__fallingTriangle) {
-        EPoint *triangleOrigin = [EPoint pointWithXComponent:165 yComponent:200];
-        ETriangle *triangle = [ETriangle eqilateralTriangleCenteredAtPoint:triangleOrigin withSideLength:75.0];
+        ETriangle *triangle = [ETriangle eqilateralTriangleCenteredAtPoint:[EPoint zeroPoint] withSideLength:75.0];
         __fallingTriangle = [[EFallingTriangle alloc] init];
         __fallingTriangle.color = [EColor colorWithColor:[NSColor orangeColor]];
         __fallingTriangle.points = triangle.points;
+        __fallingTriangle.mass = 100.0;
+        __fallingTriangle.origin = [EPoint pointWithXComponent:165 yComponent:200];
+        
+        __unsafe_unretained EFallingTriangle *fallingTriange = __fallingTriangle;
+        __fallingTriangle.animationBlock = ^{
+            NSTimeInterval delta = [[EGame sharedInstance].ticker logicDelta];
+            fallingTriange.origin.x += delta * 52;
+        };
     }
     return __fallingTriangle;
 }

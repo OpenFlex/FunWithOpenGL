@@ -12,12 +12,12 @@
 
 #pragma mark - Inititalization
 
-+ (EVector *)vectorWithXComponent:(CGFloat)xComponent yComponent:(CGFloat)yComponent
++ (EVector *)vectorWithX:(CGFloat)xComponent y:(CGFloat)yComponent
 {
-    return [EVector vectorWithXComponent:xComponent yComponent:yComponent zComponent:0.0];
+    return [EVector vectorWithX:xComponent y:yComponent z:0.0];
 }
 
-+ (EVector *)vectorWithXComponent:(CGFloat)xComponent yComponent:(CGFloat)yComponent zComponent:(CGFloat)zComponent
++ (EVector *)vectorWithX:(CGFloat)xComponent y:(CGFloat)yComponent z:(CGFloat)zComponent
 {
     EVector *vector = [[EVector alloc] init];
     [vector setX:xComponent];
@@ -26,29 +26,61 @@
     return vector;
 }
 
-+ (EVector *)vectorWithPoint:(NSPoint)point
++ (EVector *)vectorWithPoint:(EPoint *)point
 {
-    return [EVector vectorWithXComponent:point.x yComponent:point.y];
+    return [EVector vectorWithX:point.x y:point.y];
+}
+
++ (EVector *)vectorWithNSPoint:(NSPoint)point
+{
+    return [EVector vectorWithX:point.x y:point.y];
 }
 
 #pragma mark - Public methods
 
 - (EVector *)addVector:(EVector *)vector
 {
-    return [EVector vectorWithXComponent:self.x + vector.x yComponent:self.y + vector.y zComponent:self.z + vector.z];
+    return [EVector vectorWithX:self.x + vector.x
+                              y:self.y + vector.y
+                              z:self.z + vector.z];
 }
 
 - (EVector *)subtractVector:(EVector *)vector
 {
-    return [EVector vectorWithXComponent:self.x - vector.x yComponent:self.y - vector.y zComponent:self.z - vector.z];
+    return [EVector vectorWithX:self.x - vector.x
+                              y:self.y - vector.y
+                              z:self.z - vector.z];
 }
 
 - (EVector *)multiplyVector:(EVector *)vector
 {
-    return [EVector vectorWithXComponent:self.x * vector.x yComponent:self.y * vector.y zComponent:self.z * vector.z];
+    return [EVector vectorWithX:self.x * vector.x
+                              y:self.y * vector.y
+                              z:self.z * vector.z];
 }
 
-#pragma mark - 
+- (EVector *)multiplyVectorWithConstant:(CGFloat)constant
+{
+    return [EVector vectorWithX:self.x * constant
+                              y:self.y * constant
+                              z:self.z * constant];
+}
+
+- (EVector *)divideVector:(EVector *)vector
+{
+    return [EVector vectorWithX:self.x / vector.x
+                              y:self.y / vector.y
+                              z:self.z / vector.z];
+}
+
+- (EVector *)divideVectorByConstant:(CGFloat)constant
+{
+    return [EVector vectorWithX:self.x / constant
+                              y:self.y / constant
+                              z:self.z / constant];
+}
+
+#pragma mark -
 
 - (void)changeVectorValuesWithPoint:(NSPoint)point
 {
@@ -56,7 +88,7 @@
     self.y = point.y;
 }
 
-- (void)changeVectorValuesWithXComponent:(CGFloat)xComponent yComponent:(CGFloat)yComponent zComponent:(CGFloat)zComponent
+- (void)changeVectorValuesWithX:(CGFloat)xComponent y:(CGFloat)yComponent z:(CGFloat)zComponent
 {
     self.x = xComponent;
     self.y = yComponent;
@@ -67,14 +99,14 @@
 
 - (EVector *)vectorCopy
 {
-    return [EVector vectorWithXComponent:self.x yComponent:self.y zComponent:self.z];
+    return [EVector vectorWithX:self.x y:self.y z:self.z];
 }
 
 #pragma mark - Overridden methods
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"\nx: %.3f\ny: %.3f\nz: %.3f\n-----", self.x, self.y, self.z];
+    return [NSString stringWithFormat:@"\nx: %.6f\ny: %.6f\nz: %.6f\n-----", self.x, self.y, self.z];
 }
 
 @end
